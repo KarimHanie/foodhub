@@ -7,7 +7,7 @@ import 'Route/routes.dart';
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
   final double boarderSide = 15;
-  String? email;
+  String email="";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
