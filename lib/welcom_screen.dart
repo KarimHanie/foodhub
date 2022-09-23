@@ -283,6 +283,7 @@ class WelcomeScreen extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
+
                           TextButton(
                             onPressed: () {},
                             child: Text(

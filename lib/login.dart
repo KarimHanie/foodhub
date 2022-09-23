@@ -5,7 +5,7 @@ import 'components/registration_background.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
-  final double boarderSide = 15;
+  final double borderSide = 15;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,11 @@ class Login extends StatelessWidget {
               // color: Colors.red,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(),
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    )
-                  ),
+                      padding: EdgeInsets.symmetric(),
+                      primary: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      )),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -47,10 +46,10 @@ class Login extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 144, left: 26),
+                    padding: EdgeInsets.only(top: 120, left: 26),
                     child: Container(
                       // color: Colors.red,
-                      width: MediaQuery.of(context).size.width /3,
+                      width: MediaQuery.of(context).size.width / 3,
                       height: 42,
                       child: FittedBox(
                         fit: BoxFit.cover,
@@ -91,10 +90,18 @@ class Login extends StatelessWidget {
                                 ),
                                 TextFormField(
                                   decoration: InputDecoration(
+                                    floatingLabelBehavior:
+                                        FloatingLabelBehavior.never,
+                                    focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xffFE724C),
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(borderSide)),
                                     labelText: "Your email or phone",
                                     border: OutlineInputBorder(
                                       borderRadius:
-                                          BorderRadius.circular(boarderSide),
+                                          BorderRadius.circular(borderSide),
                                     ),
                                   ),
                                 ),
@@ -126,6 +133,14 @@ class Login extends StatelessWidget {
                                 ),
                                 TextFormField(
                                   decoration: InputDecoration(
+                                    floatingLabelBehavior:
+                                        FloatingLabelBehavior.never,
+                                    focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0xffFE724C),
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(borderSide)),
                                     suffixIcon: IconButton(
                                       onPressed: () {},
                                       icon: Icon(Icons.remove_red_eye,
@@ -143,6 +158,33 @@ class Login extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 78),
+                      child: GestureDetector(
+                        onTap: () =>
+                            Navigator.pushNamed(context, Routes.resetPassword),
+                        child: RichText(
+                          text: const TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Forgot password?",
+                                style: TextStyle(
+                                  color: Color(0xffFE724C),
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 32,
                   ),
                   // Button SIGN UP
                   Padding(
@@ -266,7 +308,18 @@ class Login extends StatelessWidget {
                                         borderRadius:
                                             BorderRadius.circular(30)),
                                   ),
-                                  child: Text("Facebook"),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image.asset("assets/images/FaceBook.png"),
+                                      Text(
+                                        "FACEBOOK",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 14),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Container(
@@ -279,9 +332,17 @@ class Login extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30))),
-                                  child: Text(
-                                    "Google",
-                                    style: TextStyle(color: Colors.black),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image.asset("assets/images/Google.png"),
+                                      Text(
+                                        "GOOGLE",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 14),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),

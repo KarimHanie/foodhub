@@ -1,14 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:foodhub/arguments/verification_arguments.dart';
 import 'package:foodhub/components/registration_background.dart';
-import 'package:foodhub/welcom_screen.dart';
-
 import 'Route/routes.dart';
 
 class SignUp extends StatelessWidget {
-  const SignUp({Key? key}) : super(key: key);
+  SignUp({Key? key}) : super(key: key);
   final double boarderSide = 15;
-
+  String? email;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +106,17 @@ class SignUp extends StatelessWidget {
                                   height: 12,
                                 ),
                                 TextFormField(
+                                  onChanged: (String value){
+                                      email=value;
+                                  },
                                   decoration: InputDecoration(
+                                    floatingLabelBehavior: FloatingLabelBehavior.never,
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(boarderSide),
+                                      borderSide: BorderSide(
+                                        color: Color(0xffFE724C)
+                                      )
+                                    ),
                                     labelText: "Your email or phone",
                                     border: OutlineInputBorder(
                                       borderRadius:
@@ -142,7 +151,15 @@ class SignUp extends StatelessWidget {
                                   height: 12,
                                 ),
                                 TextFormField(
+                                  obscureText: true,
+                                  obscuringCharacter: '•',
                                   decoration: InputDecoration(
+
+                                     focusedBorder: OutlineInputBorder(
+                                       borderSide: BorderSide(color: Colors.deepOrange),
+                                       borderRadius: BorderRadius.circular(boarderSide)
+                                     ),
+                                        floatingLabelBehavior: FloatingLabelBehavior.never,
                                     suffixIcon: IconButton(
                                       onPressed: () {},
                                       icon: Icon(Icons.remove_red_eye,
@@ -150,7 +167,7 @@ class SignUp extends StatelessWidget {
                                     ),
                                     labelText: "Password",
                                     border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                      borderRadius: BorderRadius.circular(boarderSide),
                                     ),
                                   ),
                                 ),
@@ -176,7 +193,9 @@ class SignUp extends StatelessWidget {
                             ),
                           ]),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.verificationCode,arguments:VerificationArguments(email: email) );
+                        },
                         style: ElevatedButton.styleFrom(
                             shadowColor: Color(0xffFE724C),
                             primary: Color(0xffFE724C),
@@ -206,27 +225,22 @@ class SignUp extends StatelessWidget {
                       child: GestureDetector(
                         onTap: () => Navigator.pushNamed(context, Routes.login),
                         child: RichText(
-                          text: TextSpan(
-                            children:[
-                              TextSpan(
+                          text: TextSpan(children: [
+                            TextSpan(
                                 text: "Already have an account?",
                                 style: TextStyle(
                                   color: Color(0xff5B5B5E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
-                                )
-                              ),
-                              TextSpan(
+                                )),
+                            TextSpan(
                                 text: "Login",
                                 style: TextStyle(
                                   color: Color(0xffFE724C),
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
-
-                                )
-                              ),
-                            ]
-                          ),
+                                )),
+                          ]),
                         ),
                       ),
                     ),
@@ -288,7 +302,18 @@ class SignUp extends StatelessWidget {
                                         borderRadius:
                                             BorderRadius.circular(30)),
                                   ),
-                                  child: Text("Facebook"),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image.asset("assets/images/FaceBook.png"),
+                                      Text(
+                                        "FACEBOOK",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 14),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Container(
@@ -301,9 +326,17 @@ class SignUp extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30))),
-                                  child: Text(
-                                    "Google",
-                                    style: TextStyle(color: Colors.black),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Image.asset("assets/images/Google.png"),
+                                      Text(
+                                        "GOOGLE",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 14),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
