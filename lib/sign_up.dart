@@ -22,7 +22,7 @@ class SignUp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 32, left: 26),
+                    padding: EdgeInsets.only(top: 98, left: 26),
                     child: Container(
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width / 3,
@@ -44,9 +44,8 @@ class SignUp extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: 29, horizontal: 26),
                           child: Container(
-                            // color: Colors.red,
                             width: MediaQuery.of(context).size.width,
-                            height: 93,
+                            // height: 95,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -61,22 +60,28 @@ class SignUp extends StatelessWidget {
                                 SizedBox(
                                   height: 12,
                                 ),
-                                TextFormField(
-                                  decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(boarderSide),
-                                      borderSide:
-                                          BorderSide(color: Colors.transparent),
-                                    ),
-                                    fillColor: Color(0xff393948),
-                                    filled: true,
-                                    hintText: "Enter Your Name please",
-                                    hintStyle:
-                                        TextStyle(color: Color(0xffADADB8)),
-                                    border: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(boarderSide),
+                                Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: 65,
+                                  child: TextFormField(
+                                    decoration: InputDecoration(
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(boarderSide),
+                                        borderSide:
+                                            BorderSide(color: Colors.transparent),
+                                      ),
+                                      fillColor: Color(0xff393948),
+                                      filled: true,
+                                      hintText: "Enter Your Name please",
+                                      hintStyle:
+                                          TextStyle(color: Color(0xffADADB8),
+                                          fontSize: 17
+                                          ),
+                                      border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(boarderSide),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -90,7 +95,7 @@ class SignUp extends StatelessWidget {
                           child: Container(
                             // color: Colors.red,
                             width: MediaQuery.of(context).size.width,
-                            height: 93,
+                            // height: 93,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -135,7 +140,6 @@ class SignUp extends StatelessWidget {
                           child: Container(
                             // color: Colors.red,
                             width: MediaQuery.of(context).size.width,
-                            height: 93,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -207,6 +211,7 @@ class SignUp extends StatelessWidget {
                         child: Text(
                           "SIGN UP",
                           style: TextStyle(
+                            letterSpacing: 2,
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                           ),
@@ -252,7 +257,6 @@ class SignUp extends StatelessWidget {
                     child: Container(
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,
-                      height: 86,
                       child: Column(
                         children: [
                           Row(
@@ -286,8 +290,7 @@ class SignUp extends StatelessWidget {
                             ],
                           ),
                           SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.013),
+                              height:10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -310,6 +313,7 @@ class SignUp extends StatelessWidget {
                                       Text(
                                         "FACEBOOK",
                                         style: TextStyle(
+                                            letterSpacing: 1,
                                             color: Colors.black, fontSize: 14),
                                       ),
                                     ],
@@ -334,6 +338,7 @@ class SignUp extends StatelessWidget {
                                       Text(
                                         "GOOGLE",
                                         style: TextStyle(
+                                            letterSpacing: 1,
                                             color: Colors.black, fontSize: 14),
                                       ),
                                     ],

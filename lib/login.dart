@@ -71,9 +71,7 @@ class Login extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 26),
                           child: Container(
-                            // color: Colors.red,
                             width: MediaQuery.of(context).size.width,
-                            height: 93,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -114,9 +112,7 @@ class Login extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: 29, horizontal: 26),
                           child: Container(
-                            // color: Colors.red,
                             width: MediaQuery.of(context).size.width,
-                            height: 93,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -213,6 +209,7 @@ class Login extends StatelessWidget {
                         child: Text(
                           "LOGIN",
                           style: TextStyle(
+                            letterSpacing: 2,
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                           ),
@@ -229,18 +226,19 @@ class Login extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 78),
                       child: GestureDetector(
-                        onTap: () => Navigator.pushNamed(context, Routes.login),
+                        onTap: () =>
+                            Navigator.pushNamed(context, Routes.signUp),
                         child: RichText(
                           text: TextSpan(children: [
                             TextSpan(
-                                text: "Already have an account?",
+                                text: "Don’t have an account?",
                                 style: TextStyle(
                                   color: Color(0xff5B5B5E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
                                 )),
                             TextSpan(
-                                text: "Login",
+                                text: "Sign Up",
                                 style: TextStyle(
                                   color: Color(0xffFE724C),
                                   fontSize: 14,
@@ -291,9 +289,7 @@ class Login extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.013),
+                            SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -316,7 +312,9 @@ class Login extends StatelessWidget {
                                       Text(
                                         "FACEBOOK",
                                         style: TextStyle(
-                                            color: Colors.black, fontSize: 14),
+                                            letterSpacing: 1,
+                                            color: Colors.black,
+                                            fontSize: 14),
                                       ),
                                     ],
                                   ),
@@ -332,17 +330,24 @@ class Login extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30))),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Image.asset("assets/images/Google.png"),
-                                      Text(
-                                        "GOOGLE",
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 14),
-                                      ),
-                                    ],
+                                  child: SizedBox.expand(
+                                    child: Row(
+
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Image.asset("assets/images/Google.png",
+                                        fit: BoxFit.scaleDown,
+                                        ),
+                                        Text(
+                                          "GOOGLE",
+                                          style: TextStyle(
+                                              letterSpacing: 1,
+                                              color: Colors.black,
+                                              fontSize: 14),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
