@@ -332,7 +332,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                       Navigator.pushNamed(context, Routes.signUp);
                     },
                     style: ElevatedButton.styleFrom(
-                        primary: Color(0xffFE724C), shape: CircleBorder()),
+                        backgroundColor: Color(0xffFE724C), shape: CircleBorder()),
                     child: Icon(Icons.arrow_forward),
                   ),
                 ),
