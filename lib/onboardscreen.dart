@@ -316,25 +316,26 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 44,
-                    ),
-                    child: SizedBox(
-                      height: 67,
-                      width: 67,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, Routes.signUp);
-
-                        },
-                        style: ElevatedButton.styleFrom(
-                            primary: Color(0xffFE724C), shape: CircleBorder()),
-                        child: Icon(Icons.arrow_forward),
-                      ),
-                    ),
-                  ),
                 ],
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  bottom: 40,
+                ),
+                child: SizedBox(
+                  height: 67,
+                  width: 67,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.signUp);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: Color(0xffFE724C), shape: CircleBorder()),
+                    child: Icon(Icons.arrow_forward),
+                  ),
+                ),
               ),
             ),
           ],

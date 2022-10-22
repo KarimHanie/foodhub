@@ -19,7 +19,7 @@ class VerificationCode extends StatelessWidget {
             color: Color(0xffffffff), // Screen background color
           ),
           Positioned(
-           top: 37,
+            top: 37,
             left: 27,
             child: SizedBox(
               height: 38,
@@ -42,8 +42,6 @@ class VerificationCode extends StatelessWidget {
               ),
             ),
           ),
-
-       
           SafeArea(
             child: SingleChildScrollView(
               child: Column(
@@ -245,22 +243,25 @@ class VerificationCode extends StatelessWidget {
                         context, Routes.verificationCode,
                         arguments: arguments.email),
                     child: RichText(
-                      text: TextSpan(children: [
-                        TextSpan(
-                            text: "I don’t recevied a code!",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              color: Color(0xff5B5B5E),
-                            )),
-                        TextSpan(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: "I don’t recevied a code!",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Color(0xff5B5B5E),
+                              )),
+                          TextSpan(
                             text: " Please resend",
                             style: TextStyle(
                               color: Color(0xffFE724C),
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                            ))
-                      ]),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],

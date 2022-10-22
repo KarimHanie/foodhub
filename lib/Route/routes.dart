@@ -7,6 +7,4 @@ class Routes{
  static const String phoneRegistration="phoneReg";
  static const String verificationCode="verification";
 
-
-
 }
