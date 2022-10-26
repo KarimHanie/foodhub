@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foodhub/arguments/verification_arguments.dart';
+import 'package:foodhub/home_screen.dart';
 import 'package:foodhub/login.dart';
 import 'package:foodhub/onboardscreen.dart';
 import 'package:foodhub/phoneegistration.dart';
@@ -35,7 +36,7 @@ class FoodHub extends StatelessWidget{
         Routes.resetPassword:(context)=>ResetPassword(),
         Routes.phoneRegistration:(context)=> PhoneRegistration(),
         Routes.verificationCode:(context)=>VerificationCode(arguments: ModalRoute.of(context)!.settings.arguments as VerificationArguments ),
-
+        Routes.homeScreen:(context)=>HomeScreen()
       },
 
     );

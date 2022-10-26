@@ -6,5 +6,6 @@ class Routes{
  static const String resetPassword="reset_password";
  static const String phoneRegistration="phoneReg";
  static const String verificationCode="verification";
+ static const String homeScreen = "HomeScreen";
 
 }
