@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,18 +13,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.white, // <-- SEE HERE
+          statusBarColor: Colors.white, // <-- SEE HERE
         ),
         elevation: 0,
         backgroundColor: Colors.white,
         leading: Container(
           padding: EdgeInsets.all(8),
           child: TextButton(
-            onPressed: (){},
+            onPressed: () {},
             style: TextButton.styleFrom(
               backgroundColor: Colors.white,
               elevation: 7,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
             ),
             child: ImageIcon(
               AssetImage('assets/images/Menu_icon.png'),
@@ -36,10 +38,7 @@ class HomeScreen extends StatelessWidget {
             'Deliver to \n4102  Pretty View Lane',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              color: Colors.black
-            ),
+                fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
           ),
         ),
         actions: [
@@ -61,7 +60,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             IconButton(
               iconSize: 40,
-              onPressed: (){},
+              onPressed: () {},
               icon: ImageIcon(
                 AssetImage('assets/icons/icon_1.png'),
                 color: Colors.grey,
@@ -69,7 +68,7 @@ class HomeScreen extends StatelessWidget {
             ),
             IconButton(
               iconSize: 40,
-              onPressed: (){},
+              onPressed: () {},
               icon: ImageIcon(
                 AssetImage('assets/icons/icon_2.png'),
                 color: Colors.grey,
@@ -77,7 +76,7 @@ class HomeScreen extends StatelessWidget {
             ),
             IconButton(
               iconSize: 40,
-              onPressed: (){},
+              onPressed: () {},
               icon: ImageIcon(
                 AssetImage('assets/icons/icon_3.png'),
                 color: Colors.grey,
@@ -85,7 +84,7 @@ class HomeScreen extends StatelessWidget {
             ),
             IconButton(
               iconSize: 40,
-              onPressed: (){},
+              onPressed: () {},
               icon: ImageIcon(
                 AssetImage('assets/icons/icon_4.png'),
                 color: Colors.grey,
@@ -93,7 +92,7 @@ class HomeScreen extends StatelessWidget {
             ),
             IconButton(
               iconSize: 40,
-              onPressed: (){},
+              onPressed: () {},
               icon: ImageIcon(
                 AssetImage('assets/icons/icon_5.png'),
                 color: Colors.grey,
@@ -115,11 +114,10 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   'What would you like to order',
                   style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
-                    decoration: TextDecoration.none
-                  ),
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                      decoration: TextDecoration.none),
                 ), //What do yu like to order text
                 SizedBox(height: 20),
                 Row(
@@ -138,13 +136,11 @@ class HomeScreen extends StatelessWidget {
                             fillColor: Colors.grey[200],
                             icon: Icon(Icons.search, color: Color(0xFF767F9D)),
                             hintText: 'Find for food or restaurant...',
-                            hintStyle: TextStyle(
-                                color: Color(0xFF9DA4BB)
-                            ),
+                            hintStyle: TextStyle(color: Color(0xFF9DA4BB)),
                             border: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                borderSide: BorderSide.none
-                            ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderSide: BorderSide.none),
                           ),
                         ),
                       ),
@@ -158,9 +154,10 @@ class HomeScreen extends StatelessWidget {
                         style: TextButton.styleFrom(
                           elevation: 7,
                           backgroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
                         ),
-                        onPressed: () {  },
+                        onPressed: () {},
                         child: ImageIcon(
                           AssetImage('assets/images/filter_icon.png'),
                           color: Color(0xFFFE724C),
@@ -180,13 +177,15 @@ class HomeScreen extends StatelessWidget {
                           backgroundColor: Colors.white,
                           elevation: 7,
                           fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Column(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/burger_category.png'),
+                              backgroundImage: AssetImage(
+                                  'assets/images/burger_category.png'),
                               backgroundColor: Colors.red,
                               radius: 40,
                             ),
@@ -194,10 +193,9 @@ class HomeScreen extends StatelessWidget {
                             Text(
                               'Burger',
                               style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black
-                              ),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -208,13 +206,15 @@ class HomeScreen extends StatelessWidget {
                           backgroundColor: Colors.white,
                           elevation: 7,
                           fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Column(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/donuts.png'),
+                              backgroundImage:
+                                  AssetImage('assets/images/donuts.png'),
                               backgroundColor: Colors.red,
                               radius: 40,
                             ),
@@ -224,8 +224,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black
-                              ),
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -236,13 +235,15 @@ class HomeScreen extends StatelessWidget {
                           backgroundColor: Colors.white,
                           elevation: 7,
                           fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Column(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/pizza.png'),
+                              backgroundImage:
+                                  AssetImage('assets/images/pizza.png'),
                               backgroundColor: Colors.red,
                               radius: 40,
                             ),
@@ -252,8 +253,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black
-                              ),
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -264,13 +264,15 @@ class HomeScreen extends StatelessWidget {
                           backgroundColor: Colors.white,
                           elevation: 7,
                           fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Column(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/mexican.png'),
+                              backgroundImage:
+                                  AssetImage('assets/images/mexican.png'),
                               backgroundColor: Colors.red,
                               radius: 40,
                             ),
@@ -280,8 +282,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black
-                              ),
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -292,13 +293,15 @@ class HomeScreen extends StatelessWidget {
                           backgroundColor: Colors.white,
                           elevation: 7,
                           fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (){},
+                        onPressed: () {},
                         child: Column(
                           children: [
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/images/asian.png'),
+                              backgroundImage:
+                                  AssetImage('assets/images/asian.png'),
                               backgroundColor: Colors.red,
                               radius: 40,
                             ),
@@ -308,8 +311,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.black
-                              ),
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -321,10 +323,9 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   'Featured restaurants',
                   style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black
-                  ),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black),
                 ),
                 SizedBox(height: 10),
                 SizedBox(
@@ -335,7 +336,8 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         color: Colors.white,
                         elevation: 7,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
                         child: SizedBox(
                           width: 266,
                           height: 225,
@@ -344,11 +346,114 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
-                                child: Image(
-                                  image: AssetImage('assets/images/McDonald_pic.png'),
-                                  height: 136,
-                                  width: 266,
-                                  fit: BoxFit.fill,
+                                child: Stack(
+                                  children: [
+                                    Image(
+                                      image: AssetImage(
+                                          'assets/images/McDonald_pic.png'),
+                                      height: 136,
+                                      width: 266,
+                                      fit: BoxFit.fill,
+                                    ),
+
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 10,
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              left: 10,
+                                            ),
+                                            child: Container(
+                                              width: 69,
+                                              height: 28,
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                              ),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceAround,
+                                                children: [
+                                                  Text(
+                                                    "4.5",
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 11,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    height: 10,
+                                                    width: 10,
+                                                    child: Image(
+                                                      image: AssetImage(
+                                                          'assets/images/yellowStar.png'),
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "(25+)",
+                                                    style: TextStyle(
+                                                      color: Color(0xff9796A1),
+                                                      fontSize: 8,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(right: 10),
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.circular(20),
+                                              child: BackdropFilter(
+                                                filter: ImageFilter.blur(
+                                                  sigmaX: 5,
+                                                  sigmaY: 5,
+                                                ),
+                                                child: Container(
+                                                  height: 28,
+                                                  width: 28,
+                                                  decoration: BoxDecoration(
+                                                    shape: BoxShape.circle,
+                                                  color: Colors.white.withOpacity(0.3)
+
+                                                  ),
+                                                  child: Center(
+                                                    child: Icon(Icons.favorite,
+                                                        color: Colors.white,
+                                                        size: 20),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+
+                                    // Positioned(
+                                    //   left: 11,
+                                    //   top: 10,
+                                    //   child: Container(
+                                    //   height: 28,
+                                    //     width: 69,
+                                    //     decoration: BoxDecoration(
+                                    //       color: Colors.white,
+                                    //       borderRadius: BorderRadius.circular(20),
+                                    //     ),
+                                    //   ),
+                                    // )
+                                  ],
                                 ),
                               ),
                               Padding(
@@ -358,14 +463,14 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
-                                      color: Colors.black
-                                  ),
+                                      color: Colors.black),
                                 ),
                               ),
                               Row(
                                 children: [
                                   ImageIcon(
-                                    AssetImage('assets/images/delivery_icon.png'),
+                                    AssetImage(
+                                        'assets/images/delivery_icon.png'),
                                     color: Color(0xFFFE724C),
                                   ),
                                   Text(
@@ -404,10 +509,9 @@ class HomeScreen extends StatelessWidget {
                                         child: Text(
                                           'BURGER',
                                           style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w400,
-                                            color: Color(0xFF515154)
-                                          ),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -424,8 +528,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)
-                                          ),
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -442,8 +545,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)
-                                          ),
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -458,7 +560,8 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         color: Colors.white,
                         elevation: 7,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
                         child: SizedBox(
                           width: 266,
                           height: 225,
@@ -468,7 +571,8 @@ class HomeScreen extends StatelessWidget {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                  image: AssetImage('assets/images/Starbucks_pic.png'),
+                                  image: AssetImage(
+                                      'assets/images/Starbucks_pic.png'),
                                   height: 136,
                                   width: 266,
                                   fit: BoxFit.fill,
@@ -481,14 +585,14 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
-                                      color: Colors.black
-                                  ),
+                                      color: Colors.black),
                                 ),
                               ),
                               Row(
                                 children: [
                                   ImageIcon(
-                                    AssetImage('assets/images/delivery_icon.png'),
+                                    AssetImage(
+                                        'assets/images/delivery_icon.png'),
                                     color: Color(0xFFFE724C),
                                   ),
                                   Text(
@@ -529,8 +633,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)
-                                          ),
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -547,8 +650,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)
-                                          ),
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -565,8 +667,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)
-                                          ),
+                                              color: Color(0xFF515154)),
                                         ),
                                       ),
                                     ),
@@ -586,8 +687,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
-                      color: Colors.black
-                  ),
+                      color: Colors.black),
                 ),
                 SizedBox(height: 10),
                 SizedBox(
@@ -598,7 +698,8 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         color: Colors.white,
                         elevation: 7,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
                         child: SizedBox(
                           width: 155,
                           height: 216,
@@ -608,7 +709,8 @@ class HomeScreen extends StatelessWidget {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                  image: AssetImage('assets/images/salmon_1.png'),
+                                  image:
+                                      AssetImage('assets/images/salmon_1.png'),
                                   height: 136,
                                   width: 266,
                                   fit: BoxFit.fill,
@@ -621,8 +723,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
-                                      color: Colors.black
-                                  ),
+                                      color: Colors.black),
                                 ),
                               ),
                               Padding(
@@ -630,10 +731,9 @@ class HomeScreen extends StatelessWidget {
                                 child: Text(
                                   'Baked salmon fish',
                                   style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
-                                    color: Color(0xFF7D7D85)
-                                  ),
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w300,
+                                      color: Color(0xFF7D7D85)),
                                 ),
                               ),
                             ],
@@ -644,7 +744,8 @@ class HomeScreen extends StatelessWidget {
                       Card(
                         color: Colors.white,
                         elevation: 7,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
                         child: SizedBox(
                           width: 155,
                           height: 216,
@@ -654,7 +755,8 @@ class HomeScreen extends StatelessWidget {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                  image: AssetImage('assets/images/salmon_2.png'),
+                                  image:
+                                      AssetImage('assets/images/salmon_2.png'),
                                   height: 136,
                                   width: 266,
                                   fit: BoxFit.fill,
@@ -667,8 +769,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
-                                      color: Colors.black
-                                  ),
+                                      color: Colors.black),
                                 ),
                               ),
                               Padding(
@@ -678,8 +779,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w300,
-                                      color: Color(0xFF7D7D85)
-                                  ),
+                                      color: Color(0xFF7D7D85)),
                                 ),
                               ),
                             ],
