@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -10,6 +11,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.white, // <-- SEE HERE
+        ),
         elevation: 0,
         backgroundColor: Colors.white,
         leading: Container(
