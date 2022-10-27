@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'components/category_btn.dart';
+import 'components/featured_card.dart';
+import 'components/popular_card.dart';
+import 'components/bottomappbar_icon.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,48 +57,12 @@ class HomeScreen extends StatelessWidget {
         color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconButton(
-              iconSize: 40,
-              onPressed: () {},
-              icon: ImageIcon(
-                AssetImage('assets/icons/icon_1.png'),
-                color: Colors.grey,
-              ),
-            ),
-            IconButton(
-              iconSize: 40,
-              onPressed: () {},
-              icon: ImageIcon(
-                AssetImage('assets/icons/icon_2.png'),
-                color: Colors.grey,
-              ),
-            ),
-            IconButton(
-              iconSize: 40,
-              onPressed: () {},
-              icon: ImageIcon(
-                AssetImage('assets/icons/icon_3.png'),
-                color: Colors.grey,
-              ),
-            ),
-            IconButton(
-              iconSize: 40,
-              onPressed: () {},
-              icon: ImageIcon(
-                AssetImage('assets/icons/icon_4.png'),
-                color: Colors.grey,
-              ),
-            ),
-            IconButton(
-              iconSize: 40,
-              onPressed: () {},
-              icon: ImageIcon(
-                AssetImage('assets/icons/icon_5.png'),
-                color: Colors.grey,
-              ),
-            ),
+            BottomAppBarIcon('assets/icons/icon_1.png'),
+            BottomAppBarIcon('assets/icons/icon_2.png'),
+            BottomAppBarIcon('assets/icons/icon_3.png'),
+            BottomAppBarIcon('assets/icons/icon_4.png'),
+            BottomAppBarIcon('assets/icons/icon_5.png'),
           ],
         ),
       ),
@@ -172,149 +137,29 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          elevation: 7,
-                          fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                        ),
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage(
-                                  'assets/images/burger_category.png'),
-                              backgroundColor: Colors.red,
-                              radius: 40,
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Burger',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            ),
-                          ],
-                        ),
+                      CategoryButton(
+                        'assets/images/burger_category.png',
+                        'BURGER'
                       ),
                       SizedBox(width: 20),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          elevation: 7,
-                          fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                        ),
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/images/donuts.png'),
-                              backgroundColor: Colors.red,
-                              radius: 40,
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Donuts',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            ),
-                          ],
-                        ),
+                      CategoryButton(
+                          'assets/images/donuts.png',
+                          'DONUTS'
                       ),
                       SizedBox(width: 20),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          elevation: 7,
-                          fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                        ),
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/images/pizza.png'),
-                              backgroundColor: Colors.red,
-                              radius: 40,
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Pizza',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            ),
-                          ],
-                        ),
+                      CategoryButton(
+                          'assets/images/pizza.png',
+                          'PIZZA'
                       ),
                       SizedBox(width: 20),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          elevation: 7,
-                          fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                        ),
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/images/mexican.png'),
-                              backgroundColor: Colors.red,
-                              radius: 40,
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Mexican',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            ),
-                          ],
-                        ),
+                      CategoryButton(
+                          'assets/images/mexican.png',
+                          'MEXICAN'
                       ),
                       SizedBox(width: 20),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          elevation: 7,
-                          fixedSize: Size.fromHeight(150),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                        ),
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/images/asian.png'),
-                              backgroundColor: Colors.red,
-                              radius: 40,
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Asian',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            ),
-                          ],
-                        ),
+                      CategoryButton(
+                          'assets/images/asian.png',
+                          'ASIAN'
                       ),
                     ],
                   ),
@@ -333,351 +178,25 @@ class HomeScreen extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Card(
-                        color: Colors.white,
-                        elevation: 7,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: SizedBox(
-                          width: 266,
-                          height: 225,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Stack(
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/McDonald_pic.png'),
-                                      height: 136,
-                                      width: 266,
-                                      fit: BoxFit.fill,
-                                    ),
-
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: 10,
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                              left: 10,
-                                            ),
-                                            child: Container(
-                                              width: 69,
-                                              height: 28,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                              ),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceAround,
-                                                children: [
-                                                  Text(
-                                                    "4.5",
-                                                    style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 11,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    height: 10,
-                                                    width: 10,
-                                                    child: Image(
-                                                      image: AssetImage(
-                                                          'assets/images/yellowStar.png'),
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    "(25+)",
-                                                    style: TextStyle(
-                                                      color: Color(0xff9796A1),
-                                                      fontSize: 8,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(right: 10),
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(20),
-                                              child: BackdropFilter(
-                                                filter: ImageFilter.blur(
-                                                  sigmaX: 5,
-                                                  sigmaY: 5,
-                                                ),
-                                                child: Container(
-                                                  height: 28,
-                                                  width: 28,
-                                                  decoration: BoxDecoration(
-                                                    shape: BoxShape.circle,
-                                                  color: Colors.white.withOpacity(0.3)
-
-                                                  ),
-                                                  child: Center(
-                                                    child: Icon(Icons.favorite,
-                                                        color: Colors.white,
-                                                        size: 20),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-
-                                    // Positioned(
-                                    //   left: 11,
-                                    //   top: 10,
-                                    //   child: Container(
-                                    //   height: 28,
-                                    //     width: 69,
-                                    //     decoration: BoxDecoration(
-                                    //       color: Colors.white,
-                                    //       borderRadius: BorderRadius.circular(20),
-                                    //     ),
-                                    //   ),
-                                    // )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(8),
-                                child: Text(
-                                  'McDonald’s',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage(
-                                        'assets/images/delivery_icon.png'),
-                                    color: Color(0xFFFE724C),
-                                  ),
-                                  Text(
-                                    'free delivery',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF5B5B5E),
-                                    ),
-                                  ),
-                                  ImageIcon(
-                                    AssetImage('assets/images/time_icon.png'),
-                                    color: Color(0xFFFE724C),
-                                  ),
-                                  Text(
-                                    '10-15 mins',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF5B5B5E),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 5.0),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'BURGER',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 5),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'CHICKEN',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 5),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'FAST FOOD',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      FeaturedCard(
+                        image: 'assets/images/McDonald_pic.png',
+                        name: 'MacDonald',
+                        rating: '4.5',
+                        number: '25',
+                        tag1: 'BURGER',
+                        tag2: 'CHICKEN',
+                        tag3: 'FAST FOOD',
                       ),
                       SizedBox(width: 10),
-                      Card(
-                        color: Colors.white,
-                        elevation: 7,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: SizedBox(
-                          width: 266,
-                          height: 225,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image(
-                                  image: AssetImage(
-                                      'assets/images/Starbucks_pic.png'),
-                                  height: 136,
-                                  width: 266,
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(8),
-                                child: Text(
-                                  'Starbucks',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage(
-                                        'assets/images/delivery_icon.png'),
-                                    color: Color(0xFFFE724C),
-                                  ),
-                                  Text(
-                                    'free delivery',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF5B5B5E),
-                                    ),
-                                  ),
-                                  ImageIcon(
-                                    AssetImage('assets/images/time_icon.png'),
-                                    color: Color(0xFFFE724C),
-                                  ),
-                                  Text(
-                                    '10-15 mins',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF5B5B5E),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 5.0),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'COFFEE',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 5),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'CHICKEN',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 5),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE1E1E1),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      padding: EdgeInsets.all(7),
-                                      child: Center(
-                                        child: Text(
-                                          'FAST FOOD',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              color: Color(0xFF515154)),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      FeaturedCard(
+                        image: 'assets/images/Starbucks_pic.png',
+                        name: 'Starbucks',
+                        rating: '4.7',
+                        number: '99',
+                        tag1: 'COFFEE',
+                        tag2: 'CHICKEN',
+                        tag3: 'FAST FOOD',
+                      )
                     ],
                   ),
                 ), //Featured restaurants
@@ -695,96 +214,18 @@ class HomeScreen extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Card(
-                        color: Colors.white,
-                        elevation: 7,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: SizedBox(
-                          width: 155,
-                          height: 216,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image(
-                                  image:
-                                      AssetImage('assets/images/salmon_1.png'),
-                                  height: 136,
-                                  width: 266,
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(8),
-                                child: Text(
-                                  'Salmon Salad',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8.0),
-                                child: Text(
-                                  'Baked salmon fish',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                      color: Color(0xFF7D7D85)),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      PopularCard(
+                        image: 'assets/images/salmon_1.png',
+                        name: 'Salmon',
+                        description: 'Baked salmon fish',
+                        price: '5.50',
                       ),
                       SizedBox(width: 10),
-                      Card(
-                        color: Colors.white,
-                        elevation: 7,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: SizedBox(
-                          width: 155,
-                          height: 216,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image(
-                                  image:
-                                      AssetImage('assets/images/salmon_2.png'),
-                                  height: 136,
-                                  width: 266,
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(8),
-                                child: Text(
-                                  'Salmon Salad',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8.0),
-                                child: Text(
-                                  'Baked salmon fish',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w300,
-                                      color: Color(0xFF7D7D85)),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      PopularCard(
+                        image: 'assets/images/salmon_2.png',
+                        name: 'Salmon',
+                        description: 'Baked salmon fish',
+                        price: '8.25',
                       ),
                     ],
                   ),
